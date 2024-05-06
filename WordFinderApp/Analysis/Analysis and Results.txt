@@ -1,0 +1,26 @@
+﻿Use of SortedSet to Store Results and Limitation to 10 Elements
+
+The use of a SortedSet to store results has significant advantages in terms of efficiency and simplicity. 
+Since the results need to be limited to the top 10 most frequent elements, a SortedSet ensures that we always have the 10 elements with the highest frequencies,
+maintaining the list automatically sorted. This avoids the need for additional sorting operations and optimizes access to the elements.
+
+Limiting the results to 10 was specifically done to ensure optimal performance and avoid excess data storage. 
+By limiting the number of results to 10, memory load is reduced and the efficiency of the algorithm is improved, especially in large matrices or with many search words.
+
+Use of Parallelization with Parallel.ForEach
+
+Using Parallel.ForEach to iterate over the search words in the matrix provides a significant improvement in efficiency, especially on systems with multiple CPU cores. 
+This technique allows processing multiple search words simultaneously, distributing the workload among the different processor cores and accelerating the search process.
+
+Implementation of the Boyer-Moore Search Algorithm
+The Boyer-Moore search algorithm is used to efficiently search for words in the matrix. This algorithm is known for its speed and efficiency in substring search,
+making it ideal for this scenario. By using this algorithm, we can minimize search time and improve the overall performance of the word search algorithm.
+
+Results:
+
+1.000.000 wordsstream : 63 seconds.
+100.000   wordstream  : 7 seconds.
+10.000	  wordstream  : 800 milliseconds.
+1.000     wordstream  : 90 milliseconds.
+100		  wordstream  : 12 milliseconds.
+
